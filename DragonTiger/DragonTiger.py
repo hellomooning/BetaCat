@@ -1,11 +1,19 @@
 import tushare as ts
-import Utils.utils as utils
 
-def get_top_list(date):
+def top_list(date):
     return ts.top_list(date)
 
-def get_cap_tops(days=30):
+def cap_tops(days=5):
     return ts.cap_tops(days)
 
+def broker_tops(days=5):
+    return ts.broker_tops(days)
+
+def inst_detail():
+    return ts.inst_detail()
+
+def inst_tops():
+    return ts.inst_tops()
+
 if __name__ == '__main__':
-    print(get_cap_tops())
+    print(inst_tops())
